@@ -1,0 +1,17 @@
+containers: {
+    app: {
+        build: {
+            context: "."
+        }
+        ports: publish: "5000/http"
+        if args.dev {
+            dirs: {
+                "/src": "./"
+            }
+        }
+    }
+    redis: {
+        image: "redis:7-alpine"
+        ports: "6379/tcp"
+    }
+}
