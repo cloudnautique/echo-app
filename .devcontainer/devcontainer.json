@@ -3,14 +3,16 @@
 {
 	"name": "Python 3",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	"build": {
+		"dockerfile": "Dockerfile.dev"
+	},
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {}
 	},
 	"forwardPorts": [
 		5000
 	],
-	"postCreateCommand": "pip3 install --user -r requirements.txt && curl https://get.acorn.io|sh && if [ -z \"${ACORN_HUB_LOGIN}\" ]; then acorn login -p $ACORN_HUB_LOGIN;fi",
+	"postCreateCommand": "/init.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [

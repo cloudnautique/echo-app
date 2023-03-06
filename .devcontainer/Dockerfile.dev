@@ -1,0 +1,5 @@
+FROM mcr.microsoft.com/devcontainers/python:0-3.11
+
+RUN curl https://get.acorn.io|sh
+
+ADD ./init.sh /init.sh
