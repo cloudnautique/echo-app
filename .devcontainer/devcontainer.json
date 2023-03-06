@@ -17,6 +17,11 @@
 				"acorn-labs.acorn",
 				"samuelcolvin.jinjahtml"
 			]
+		},
+		"codespaces": {
+			"openFiles": [
+				"GettingStarted.md"
+			]
 		}
 	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
