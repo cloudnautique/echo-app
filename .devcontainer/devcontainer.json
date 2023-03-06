@@ -10,7 +10,7 @@
 	"forwardPorts": [
 		5000
 	],
-	"postCreateCommand": "pip3 install --user -r requirements.txt && curl https://get.acorn.io|sh",
+	"postCreateCommand": "pip3 install --user -r requirements.txt && curl https://get.acorn.io|sh && if [ -z \"${ACORN_HUB_LOGIN}\" ]; then $ACORN_HUB_LOGIN;fi",
 	"customizations": {
 		"vscode": {
 			"extensions": [
