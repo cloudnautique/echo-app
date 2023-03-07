@@ -9,4 +9,3 @@ fi
 push "/workspaces/echo-app"
 
 pip3 install --user -r requirements.txt
-acorn run -i .

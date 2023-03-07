@@ -13,6 +13,7 @@
 		5000
 	],
 	"postCreateCommand": "/init.sh",
+	"postStartCommand": "acorn run -i .",
 	"customizations": {
 		"vscode": {
 			"extensions": [
