@@ -9,9 +9,19 @@ containers: {
                 "/src": "./"
             }
         }
+        env: {
+            REDIS_PASS: "secret://redis-password/token"
+        }
     }
     redis: {
         image: "redis:7-alpine"
         ports: "6379/tcp"
+    }
+}
+
+secrets: "redis-password": {
+    type: "opaque"
+    data: {
+        token: ""
     }
 }
